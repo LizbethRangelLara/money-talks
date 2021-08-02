@@ -1,20 +1,21 @@
-import React from 'react';
+import React,{useState} from 'react';
 
-class Consultants extends React.Component {
-    render()
-    {
-      return (
-        <div>
-          <h1>Menu</h1>
-          <p>Check out our amazing 24/7 menu:
-            <ul>
-              <li>Lazy Loading</li>
-              <li>Dynamic Route Matching</li>
-              <li>Location Transition Handling</li>
-            </ul>
-          </p>
-        </div>
-      );
-    }
-  }
-  export default Consultants;
+function App() {
+  const [readMore,setReadMore]=useState(false);
+  const extraContent=<div>
+      <p className="extra-content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, consectetur neque ab 
+        porro quasi culpa nulla rerum quis minus voluptatibus sed hic ad quo sint, libero 
+        commodi officia aliquam! Maxime.
+      </p>
+  </div>
+  const linkName=readMore?'Read Less << ':'Read More >> '
+  return (
+    <div className="App">
+      <a className="read-more-link" onClick={()=>{setReadMore(!readMore)}}><h2>{linkName}</h2></a>
+      {readMore && extraContent}
+    </div>
+  );
+}
+
+export default App;
