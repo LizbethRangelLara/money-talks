@@ -8,8 +8,7 @@ import Consultants from './components/consultants.js';
 
 import {
   BrowserRouter as Router, 
-  Route,
-  Link
+  Route
 } from 'react-router-dom';
 
 
