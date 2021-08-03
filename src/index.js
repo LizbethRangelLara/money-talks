@@ -6,6 +6,8 @@ import Home from './components/home.js';
 import Booking from './components/booking.js';
 import Consultants from './components/consultants.js';
 
+import Firebase ,{FirebaseContext} from './components/Firebase';
+
 import {
   BrowserRouter as Router, 
   Route,
@@ -21,9 +23,11 @@ class Routes extends React.Component {
         <div>
           <Navbar />
           <hr />
-          <Route name="Home" exact path="/" component={Home}/>
-          <Route name="Consultants" exact path="/consultants" component={Consultants}/>
-          <Route name="Booking" exact path="/booking" component={Booking}/>
+          <Route name="Home" exact path="/" components={Home}/>
+          <Route name="Consultants" exact path="/consultants" components={Consultants}/>
+          <Route name="Booking" exact path="/booking" components={Booking}/>
+
+
         </div>
       </Router>
     )
@@ -31,7 +35,10 @@ class Routes extends React.Component {
 }
 
 ReactDOM.render(
-  <Routes />,
+  <FirebaseContext.Provider value={new Firebase()}>
+    <Routes />
+  </FirebaseContext.Provider>,
+ 
   document.getElementById('root')
 );
 
