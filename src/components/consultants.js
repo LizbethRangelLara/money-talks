@@ -1,21 +1,34 @@
-import React,{useState} from 'react';
+import React, {Component} from 'react';
+import '../css/consultants.css';
+import PropTypes from 'prop-types';
 
-function App() {
-  const [readMore,setReadMore]=useState(false);
-  const extraContent=<div>
-      <p className="extra-content">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, consectetur neque ab 
-        porro quasi culpa nulla rerum quis minus voluptatibus sed hic ad quo sint, libero 
-        commodi officia aliquam! Maxime.
-      </p>
-  </div>
-  const linkName=readMore?'Read Less << ':'Read More >> '
-  return (
-    <div className="App">
-      <a className="read-more-link" onClick={()=>{setReadMore(!readMore)}}><h2>{linkName}</h2></a>
-      {readMore && extraContent}
-    </div>
-  );
+class Consultants extends Component {
+  constructor() {
+    super();
+  }
+
+  render() {
+    return (
+      <div className="col-sm-6">
+        <div className="card card-view">
+          <div className="card-body">
+            <h5 className="card-title">{this.props.title}</h5>
+            <p>{this.props.body}</p>
+            <button className="btn btn-info">Edit</button>
+            <button className="btn btn-danger">Delete</button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
-export default App;
+Consultants.defaultProps = {
+    title: "Bill Gates",
+    body: "Industry: Software & Entrepreneurship \n Years Experience: 46 Years \n",
+};
+
+Consultants.propTypes = {
+    title: PropTypes.string
+};
+export default Consultants;
