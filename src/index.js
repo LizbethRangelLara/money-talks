@@ -11,8 +11,7 @@ import Firebase from 'firebase';
 
 import {
   BrowserRouter as Router, 
-  Route,
-  Link
+  Route
 } from 'react-router-dom';
 
 
