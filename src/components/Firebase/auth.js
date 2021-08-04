@@ -1,4 +1,4 @@
-import { doc } from "prettier";
+
 import { db,firebaseAuth,storageKey } from "./constants";
 
 export function auth(email, password){

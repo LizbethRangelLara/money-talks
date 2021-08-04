@@ -1,25 +1,27 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
-import {login, resetPassword} from '../Firebase/auth';
+import { login, resetPassword } from '../Firebase/auth';
 
 import RaisedButton from 'material-ui/RaisedButton';
 
 import TextField from 'material-ui/TextField';
 
-function setErrorMsg(error){
+
+
+function setErrorMsg(error) {
 
     return {
-        loginMessage : error
+        loginMessage: error
     };
 }
 
-export default class login extends Component {
-    constructor(props) {
-        super(props);
+class Login extends Component {
+    constructor(pr) {
+        super();
         this.state = {
-            email : '',
-            password : '',
-            loginMessage : null,
+            email: '',
+            password: '',
+            loginMessage: null,
         };
     }
 
@@ -31,64 +33,65 @@ export default class login extends Component {
         });
     };
 
-    resetPassword = e =>{
+    resetPassword = e => {
         e.preventDefault();
         resetPassword(this.state.email)
-        .then(()=> 
-        this.setState(
-            setErrorMsg(`Password reset email sent to ${this.state.email}.`)
-        ))
-        .catch(error => this.setState(setErrorMsg(`Email address not found`)));
+            .then(() =>
+                this.setState(
+                    setErrorMsg(`Password reset email sent to ${this.state.email}.`)
+                ))
+            .catch(error => this.setState(setErrorMsg(`Email address not found`)));
     };
 
 
-    render (){
+    render() {
 
         return (
-            <form 
-            onSubmit={e=> this.handleSubmit(e)}
+            <form
+            style={style.container}
+                onSubmit={event => this.handleSubmit(event)}
             >
-                    <h3>Login</h3>
-                    <TextField
+                <h3>Login</h3>
+                <TextField
                     hintText="Enter your Email"
-                    floatingLabelText = "Email"
-                    onChange={(e, newValue => this.setState({email: newValue}))}
+                    floatingLabelText="Email"
+                    onChange={(event, newValue) => this.setState({ email: newValue })}
 
-                    />
+                />
 
-                    <br />
+                <br />
 
-                    <TextField
+                <TextField
                     type="password"
                     hintText="Enter your password"
-                    floatingLabelText = "Password"
-                    onChange={(e, newValue)=> this.setState({password : newValue})}
+                    floatingLabelText="Password"
+                    onChange={(event, newValue) => this.setState({ password: newValue })}
 
-                    />
+                />
 
-                    <br />
-                    {this.state.loginMessage && (
-                        <div className="alert alert-danger" role="alert">
-                            <span 
+                <br />
+                {this.state.loginMessage && (
+                    <div className="alert alert-danger" role="alert">
+                        <span
                             className="glyphicon glyphicon-exclamation-sign"
                             aria-hidden="true"
-                            />
+                        />
 
-                            <span className="sr-only">Error:</span>
-                            &nbsp;{this.state.loginMessage}{' '}
-                            <a href='' onClick={this.resetPassword} className="alert-link">
-                                Forgot Password
-                            </a>
-                        </div>
-                    )
-                    }
+                        <span className="sr-only">Error:</span>
+                        &nbsp;{this.state.loginMessage}{' '}
+                        <a href='' onClick={this.resetPassword} className="alert-link">
+                            Forgot Password
+                        </a>
+                    </div>
+                )
+                }
 
-                    <RaisedButton
+                <RaisedButton
                     label="login"
                     primary={true}
                     style={style.raisedBtn}
                     type="submit"
-                    />
+                />
 
             </form>
 
@@ -109,3 +112,5 @@ const style = {
     raisedBtn,
     container
 };
+
+export default Login;

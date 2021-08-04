@@ -1,62 +1,46 @@
-import React ,{Component} from 'react';
-import {Link} from 'react-router-dom';
-import {auth} from '../Firebase/auth';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { auth } from '../Firebase/auth';
 import RaisedButton from 'material-ui/RaisedButton';
 
+
 import TextField from 'material-ui/TextField';
-
-import { FirebaseContext } from '../Firebase';
-
-import * as ROUTES from '.'
-import { func } from 'prop-types';
-
-function setErrorMsg (error){
+function setErrorMsg(error) {
     return {
-        registerError : error.message
+        registerError: error.message
     };
 }
 
 
 
 const INITIAL_STATE = {
-    username : "",
-    email : "",
+    username: "",
+    email: "",
     password: "",
 
-    error : null,
+    error: null,
 };
 
 class SignUpForm extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
 
-        this.state = {...INITIAL_STATE};
+        this.state = { ...INITIAL_STATE };
     }
 
     handleSubmit = event => {
 
         event.preventDefault();
-        auth(this.state.email, this.state.password).catch(event => 
+        auth(this.state.email, this.state.password).catch(event =>
             this.setState(setErrorMsg(event)));
 
     }
 
     onChange = event => {
-        this.setState({[event.target.name]: event.target.value});
+        this.setState({ [event.target.name]: event.target.value });
     };
-    render (){
-
-        const {
-           username,
-            email,
-            error,
-        } = this.state;
-
-        const isInvalid =
-            passwordOne !== passwordTwo ||
-            passwordOne === '' ||
-            email === '' ||
-            username === '';
+    render() {
+        
         return (
             <form handleSubmit={this.handleSubmit} style={style.container}>
                 <h3>Book Services</h3>
@@ -64,24 +48,24 @@ class SignUpForm extends Component {
                     hintText="Enter your Email"
                     floatingLabelText="Email"
                     onChange={this.onChange}
-            
+
                 />
                 <br />
 
                 <TextField
-                hintText="Enter your password"
-               floatingLabelText="Password"
-                onChange={this.onChange}
-                type="password"
-          
+                    hintText="Enter your password"
+                    floatingLabelText="Password"
+                    onChange={this.onChange}
+                    type="password"
+
                 />
 
                 <br />
                 {this.state.error && (
-                    <div className="alert alert-danger" role= "alert">
-                        <span 
-                        className="glyphicon glyphicon-exclamation-sign"
-                        aria-hidden="true"
+                    <div className="alert alert-danger" role="alert">
+                        <span
+                            className="glyphicon glyphicon-exclamation-sign"
+                            aria-hidden="true"
 
                         />
                         <span className="sr-only">Error:</span>
@@ -90,13 +74,13 @@ class SignUpForm extends Component {
                 )}
 
                 <RaisedButton
-                label="SignUp"
-                primary={true}
-                    style = {style.raisedBtn}
+                    label="SignUp"
+                    primary={true}
+                    style={style.raisedBtn}
                     type="submit"
-   
 
-           />
+
+                />
 
             </form>
         );
@@ -105,12 +89,12 @@ class SignUpForm extends Component {
 
 
 const raisedBtn = {
-    margin : 15
+    margin: 15
 }
 
 
 const container = {
-    textAlign : 'center'
+    textAlign: 'center'
 };
 
 const style = {
@@ -119,4 +103,4 @@ const style = {
 }
 
 
-export {SignUpForm, SignUpLink};
+export default SignUpForm;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
 import './css/index.css';
 import Navbar from './components/navbar.js';
@@ -6,7 +6,8 @@ import Home from './components/home.js';
 import Booking from './components/booking.js';
 import Consultants from './components/consultants.js';
 
-import Firebase ,{FirebaseContext} from './components/Firebase';
+import FirebaseContext from './components/Firebase/context';
+import Firebase from 'firebase';
 
 import {
   BrowserRouter as Router, 

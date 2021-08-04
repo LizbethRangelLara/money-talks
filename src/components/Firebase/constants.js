@@ -14,7 +14,7 @@ const firebaseConfig = {
     measurementId: "G-TN2LVWCVLK"
   };
 
-  firebase.initializeApp(config);
+  firebase.initializeApp(firebaseConfig);
 
   export const storageKey = 'KEY_FOR_LOCAL-STORAGE';
   export const db =firebase.firestore();
