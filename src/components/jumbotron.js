@@ -6,7 +6,7 @@ class Jumbotron extends React.Component{
         return(
             <div className="jumbotron">
                 <h1 className="display-4">Money Talks</h1>
-                <p className="lead">Find your perfect Career Consultant: We off skill workshops and 1-on-1 strategy sessions.</p>
+                <p className="lead">Find your perfect Career Consultant: We offer skill workshops and 1-on-1 strategy sessions.</p>
                 <hr className="my-4" />
             </div>
         );

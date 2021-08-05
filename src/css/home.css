@@ -1,24 +1,38 @@
 .jumbotron{
-    background-image: url("../images/businessprofessionals.jpg");
+    background-image: url("../images/newbackground.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     padding-top: 200px;
     padding-bottom: 200px;
-    
+    padding-left:200px;
+    color:black;
+    margin-bottom: 0px;
 }
 
 form{
+    padding-top:50px;
     margin-left:200px;
     margin-right:200px;
 }
 
 .jumbotron p{
-    font-size: 20px;
+    font-size: 25px;
     font-weight:bold;
-    color:white;
+}
+
+.jumbotron h1{
+    font-weight:bold;
 }
 
 .footer{
     text-align: right;
     margin-right:200px;
+}
+
+.intro{
+    padding-top:10px;
+    background-color:lightgray;
+    font-size: 20px;
+    padding-left:100px;
+    padding-right:100px;
 }

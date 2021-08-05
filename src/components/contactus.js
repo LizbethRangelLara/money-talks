@@ -4,6 +4,7 @@ class ContactUs extends React.Component{
     render(){
         return(
             <form>
+                <h1>Contact Us:</h1>
                 <div className="form-group">
                     <label htmlFor="name">Name:</label>
                     <input type="name" className="form-control" />
@@ -20,6 +21,7 @@ class ContactUs extends React.Component{
                     <label htmlFor="contact">Questions or comments:</label>
                     <textarea className="form-control" rows="3"></textarea>
                 </div>
+                <input type="submit"></input>
             </form>
         )
     }
