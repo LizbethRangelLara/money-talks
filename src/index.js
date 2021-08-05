@@ -1,10 +1,10 @@
-import React from 'react';
+import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
 import './css/index.css';
 import Navbar from './components/navbar.js';
 import Home from './components/home.js';
 import Booking from './components/booking.js';
-import Consultants from './components/consultants.js';
+import Consultantposts from './components/consultantposts.js';
 
 import {
   BrowserRouter as Router, 
@@ -20,7 +20,7 @@ class Routes extends React.Component {
         <div>
           <Navbar />
           <Route name="Home" exact path="/" component={Home}/>
-          <Route name="Consultants" exact path="/consultants" component={Consultants}/>
+          <Route name="Consultantposts" exact path="/consultantposts" component={Consultantposts}/>
           <Route name="Booking" exact path="/booking" component={Booking}/>
         </div>
       </Router>
@@ -29,7 +29,10 @@ class Routes extends React.Component {
 }
 
 ReactDOM.render(
-  <Routes />,
+
+    <Routes />,
+
+ 
   document.getElementById('root')
 );
 

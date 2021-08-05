@@ -8,7 +8,8 @@ class Navbar extends React.Component {
     render(){
       return(
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <Link to="/" className="navbar-brand">Navbar</Link>
+          <a className="navbar-brand" href="#">Navbar</a>
+          <img src="../MTLogo.png" class="img-fluid" width="100"></img>          
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -18,7 +19,7 @@ class Navbar extends React.Component {
               <Link to="/" className="nav-link">Home</Link>
               </li>
               <li className="nav-item">
-              <Link to="consultants" className="nav-link">Consultants</Link>
+              <Link to="consultantposts" className="nav-link">Consultants</Link>
               </li>
               <li className="nav-item">
                 <Link to="booking" className="nav-link">Booking</Link>

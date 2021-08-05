@@ -34,3 +34,11 @@ code {
 
 }
 
+.navbar-brand{
+  color: red !important;
+}
+
+.navbar {
+  color:red;
+  background-color: green;
+}
