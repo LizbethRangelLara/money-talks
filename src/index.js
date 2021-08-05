@@ -20,17 +20,9 @@ class Routes extends React.Component {
         <div>
           <Navbar />
           <hr />
-<<<<<<< HEAD
           <Route name="Home" exact path="/" component={Home}/>
           <Route name="Consultantposts" exact path="/consultantposts" component={Consultantposts}/>
           <Route name="Booking" exact path="/booking" component={Booking}/>
-=======
-          <Route name="Home" exact path="/" components={Home}/>
-          <Route name="Consultants" exact path="/consultants" components={Consultants}/>
-          <Route name="Booking" exact path="/booking" components={Booking}><Booking /> </Route>
-
-
->>>>>>> ff74858ff6976c0a8cea4656418671f77b2d93ab
         </div>
       </Router>
     )

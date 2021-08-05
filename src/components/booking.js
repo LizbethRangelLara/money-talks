@@ -17,7 +17,6 @@ import {
   Row
 } from "reactstrap";
 import initialTimeSlots from "../initialTimeSlots.json";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "../css/booking.css";
 
 export default function App() {
