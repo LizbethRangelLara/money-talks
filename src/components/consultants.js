@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import Consultantposts from './consultantposts';
 import "../css/consultants.css"
+import {
+  Link
+} from 'react-router-dom';
 
 
 class Consultant extends Component {
@@ -18,12 +20,12 @@ class Consultant extends Component {
   render() {
     let imageElement, nameElement, industryElement, experienceElement, linkedinElement, aboutElement, buttonArea;
     
-      imageElement = < img src= {this.props.image} width="300px" height="300px"></img>;
-      nameElement = <h3 style={{color: 'black'}}> <strong>{this.props.name} </strong></h3>;
-      industryElement = <p style={{color: 'black'}}>{this.props.industry}</p>
-      experienceElement = <p style={{color: 'black'}}>{this.props.experience}</p>
-      linkedinElement = <p style={{color: 'black'}}>{this.props.linkedin}</p>
-      aboutElement = <p style={{color: 'black'}}>{this.props.about}</p>;
+      imageElement = <img src= {this.props.image} />;
+      nameElement = <h3>{this.props.name}</h3>;
+      industryElement = <p><strong>Industry: </strong>{this.props.industry}</p>;
+      experienceElement = <p><strong>Experience: </strong>{this.props.experience}</p>;
+      linkedinElement = <p><strong>LinkedIn:  </strong><a href={this.props.linkedin}>{this.props.linkedin}</a></p>;
+      aboutElement = <p>{this.props.about}</p>;
       buttonArea = (
         <div>
           <button id="bookConsultant" className="btn btn-danger" onClick={event => window.location.href='/booking'}>Book</button>
@@ -32,15 +34,23 @@ class Consultant extends Component {
 
     return (
       <div className="col-sm-3">
-        <div className="card card-view">
-          <div className="card-body">
-            {imageElement}
-            {nameElement}
-            {industryElement}
-            {experienceElement}
-            {linkedinElement}
-            {aboutElement}
-            {buttonArea}
+        <div class="card" style={{width: "100%"}}>
+          <div className="card card-view">
+            <div class="card-img-top text-center">
+              {imageElement}
+            </div>
+            <div className="card-body">
+              <div className="consultantname">
+              {nameElement}
+              </div>
+              <div>
+              {industryElement}
+              </div>
+              {experienceElement}
+              {linkedinElement}
+              <strong>About:</strong>{aboutElement}
+              {buttonArea}
+            </div>
           </div>
         </div>
       </div>

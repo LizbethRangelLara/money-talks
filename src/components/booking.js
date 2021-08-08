@@ -19,6 +19,8 @@
           import initialTimeSlots from "../initialTimeSlots.json";
           import "bootstrap/dist/css/bootstrap.min.css";
           import "../css/booking.css";
+          import Footer from './footer.js';
+
 
           export default function App() {
             const [state, dispatch] = useReducer(
@@ -137,10 +139,9 @@
             }
             return (
               <div>
-                <Jumbotron className="text-sm-left text-md-center">
-                  <Container>
-                    <h1 className="display-4">Let's Connect! 📅</h1>
-                    <hr className="my-2" />
+                <Jumbotron>
+                  <Container fluid={true}>
+                    <h1>Let's Connect! </h1>
                     <p className="lead">
                       Tap or click on an available timeslot below to book an appointment.{" "}
                     </p>
@@ -289,6 +290,8 @@
                     </ModalBody>
                   </Modal>
                 </Container>
+                <p>&nbsp;</p>
+                <Footer />
               </div>
             );
           }

@@ -1,0 +1,17 @@
+img {
+    filter:grayscale(100%);
+}
+
+h3 {
+    color:black;
+    font-weight:bold;
+}
+
+.card p{
+    color:black;
+    
+}
+
+.consultantname{
+    text-align:center;
+}
