@@ -13,7 +13,7 @@ class ContactUs extends React.Component{
                     <label htmlFor="email">Email Address:</label>
                     <input type="email" className="form-control" />
                 </div>
-                <div className="form-group">
+                <div className="form-group w-100" >
                     <label htmlFor="phone">Phone number:</label>
                     <input type="phone" className="form-control" />
                 </div>
@@ -21,7 +21,7 @@ class ContactUs extends React.Component{
                     <label htmlFor="contact">Questions or comments:</label>
                     <textarea className="form-control" rows="3"></textarea>
                 </div>
-                <input type="submit"></input>
+                <input type="submit" className="submit" ></input>
             </form>
         )
     }

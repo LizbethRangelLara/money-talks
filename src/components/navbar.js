@@ -9,7 +9,7 @@ import {
 class Navbar extends React.Component {
     render(){
       return(
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <img src="../MTLogo.png" class="img-fluid" width="100"></img>          
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>

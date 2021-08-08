@@ -1,5 +1,5 @@
 .jumbotron{
-    background-image: url("../images/newbackground.jpg");
+    background-image: url("../images/businessprofessionals.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     padding-top: 200px;
@@ -10,26 +10,25 @@
 
 form{
     color: white;
+    margin-left:25%;
+    width: 100%;
 }
 
 .form-group{
     font-family: Helvetica Condensed;
-    text-align: center; /*Fix, text line up left of text box*/
 }
 
-.form-control{
-    align-self: center;
-}
+
 
 .jumbotron p{
     font-size: 25px;
     font-weight:bold;
 }
 
-.jumbotron h1{
-    font-weight:bold;
-    color: white !important;
-    
+.jumbotron img{
+    width:300px;
+    padding: 0;
+    margin: 0;
 }
 
 .form-intro {
@@ -39,3 +38,10 @@ form{
     font-family: Helvetica Condensed;
 }
 
+.form-control {
+    size: "50";
+}
+
+.submit {
+    margin-left:25%;
+}
