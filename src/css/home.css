@@ -4,22 +4,34 @@
     background-size: 100% 100%;
     padding-top: 200px;
     padding-bottom: 200px;
+    font-family: Copperplate;
     
 }
 
 form{
-    margin-left:200px;
-    margin-right:200px;
+    color: white;
+}
+
+.form-group{
+    font-family: Helvetica Condensed;
+    text-align: center; /*Fix, text line up left of text box*/
+}
+
+.form-control{
+    align-self: center;
 }
 
 .jumbotron p{
     font-size: 20px;
     font-weight:bold;
-    color:white;
+    color: white !important;
     
 }
 
-.footer{
-    text-align: right;
-    margin-right:200px;
+.form-intro {
+    color: white;
+    margin-left: 25%;
+    margin-right: 25%;
+    font-family: Helvetica Condensed;
 }
+

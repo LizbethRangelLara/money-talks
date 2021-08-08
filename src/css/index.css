@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   padding: 0;
@@ -6,7 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black;
+  background-color: black!important;
   color: white;
   
 }
@@ -14,31 +15,4 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-.footer {
-  background: dimgray;
-  color: lightgrey;
-  border-style: dotted;
-  border-color: black;
-  border-width: 5px;
-  width: 100%;
-  height: 45px;
-  
-}
-
-.footer p {
-    text-align: center;
-    padding-top: 5px;
-    font-weight: 400;
-
-}
-
-.navbar-brand{
-  color: red !important;
-}
-
-.navbar {
-  color:red;
-  background-color: green;
 }
