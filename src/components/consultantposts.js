@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Consultants from './consultants.js';
+import "../css/consultants.css";
 
 class Consultantposts extends Component {
   constructor() {
