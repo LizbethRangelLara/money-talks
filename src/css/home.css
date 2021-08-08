@@ -42,6 +42,10 @@ form{
     size: "50";
 }
 
-.submit {
-    margin-left:25%;
+form .submit {
+    padding-left:0;
+}
+
+form h1{
+    padding-left: 0;
 }

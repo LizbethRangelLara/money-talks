@@ -21,7 +21,9 @@ class ContactUs extends React.Component{
                     <label htmlFor="contact">Questions or comments:</label>
                     <textarea className="form-control" rows="3"></textarea>
                 </div>
-                <input type="submit" className="submit" ></input>
+                <div className="submit">
+                <input type="submit"></input>
+                </div>
             </form>
         )
     }
