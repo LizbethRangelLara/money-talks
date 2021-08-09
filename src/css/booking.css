@@ -50,17 +50,7 @@ height: 100%;
 }
 
 .mx-1{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width:100%;
-  font-family: 'Montserrat', sans-serif;
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  align-items: center;
-  flex-direction: column;
+
 }
 
 h1 {
